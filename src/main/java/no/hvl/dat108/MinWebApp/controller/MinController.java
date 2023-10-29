@@ -74,22 +74,6 @@ public class MinController {
         return nyAnsatt.toString();
     }
 
-    /*
-    @PutMapping(value = "/updateAnsattById")
-    @ResponseBody
-    public String updateAnsattById(@RequestParam int id, @RequestParam String updatedValue) {
-        Optional<Ansatt> optionalAnsatt = ansattRepository.findById(id);
-        if (optionalAnsatt.isEmpty()) {
-            return "Ansatt with ID " + id + " not found";
-        }
-
-        Ansatt ansatt = optionalAnsatt.get();
-        ansatt.setNavn(updatedValue);
-        ansattRepository.save(ansatt);
-
-        return "Updated Ansatt with ID " + id + " to " + updatedValue;
-    }
-     */
 
     // how to use this method in the http request, example: POST /updateAnsattById?id=1&fieldToUpdate=manedslonn&updatedValue=5500
     @PostMapping(value = "/updateAnsattById")
